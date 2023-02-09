@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate(){
+            var id=document.getElementById("text").value;
+            var regx=/^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/
+
+            if(regx.test(id)){ //test function is used to verify the pattern 
+                alert("valid maild id")
+                return true
+            }
+            else{
+                alert("invalid mail id")
+                return false
+            }
+        }
+           </script>
+
+</head>
+<body>
+    <form>
+        <input id="text"placeholder="email" type="text"><br><br>
+        <button   onclick="validate()" type="button" >submit</button>
+    </form>
+</body>
+</html>
